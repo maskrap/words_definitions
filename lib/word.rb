@@ -1,8 +1,10 @@
 class Word
+  @@words = []
   attr_reader(:name, :id)
 
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)
+    @id = @@definitions.length().+(1)
   end
 
   define_singleton_method(:find) do |identification|

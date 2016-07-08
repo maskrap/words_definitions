@@ -54,7 +54,7 @@ describe(Definition) do
     it("returns a definition by its id number") do
       test_definition = Definition.new("A bad hunter")
       test_definition.save()
-      test_definition2 = Definition.new("A secret underground society that takes pleasure in torturing fruits and vegetables. ")
+      test_definition2 = Definition.new("A secret underground society that takes pleasure in torturing fruits and vegetables.")
       test_definition2.save()
       expect(Definition.find(test_definition.id())).to(eq(test_definition))
     end

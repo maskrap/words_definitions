@@ -1,0 +1,10 @@
+<h1>Add a definition to <%= @definition.name() %> </h1>
+
+<form action="/definitions" method="post">
+  <input id='definition_id' name='definition_id' type='hidden' value='<%= @definition.id() %>'>
+
+  <label for='definition'>Definition:</label>
+  <input id='definition' definition='definition' type='text'>
+
+  <button type="submit">Add Definition</button>
+</form>

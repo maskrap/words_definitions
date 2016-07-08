@@ -1,7 +1,7 @@
 require('rspec')
 require('word')
 
-describe('Words') do
+describe('Word') do
   before() do
     Word.clear()
   end
