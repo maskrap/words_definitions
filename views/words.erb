@@ -1,8 +1,9 @@
 <h1>Words</h1>
-
-<h3>Here are the words on this list:</h3>
 <ul>
   <% @words.each() do |word| %>
-    <li><a href="/words/<%= word.id() %>"><%= word.model() %></a></li>
+    <li><a href="/words/<%= word.id() %>"><%= word.name() %></a></li>
   <% end %>
 </ul>
+
+<a href="/words/new">Add a new word</a>
+<a href="/">Main Page</a>
