@@ -41,7 +41,7 @@ describe('the words and definitions path', {:type => :feature}) do
     visit('/words')
     click_link('Vegetarian')
     click_link('Add a new definition')
-    fill_in('meaning', :with => "A secret underground society that takes pleasure in torturing fruits and vegetables. ")
+    fill_in('def', :with => "A secret underground society that takes pleasure in torturing fruits and vegetables. ")
     click_button('Add')
     expect(page).to have_content('A secret underground society that takes pleasure in torturing fruits and vegetables. ')
   end
