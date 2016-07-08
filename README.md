@@ -45,7 +45,7 @@ See spec folder
 * Open using Sinatra
 
 #### Option #2
-* Click on given (X)
+* Click on given link: https://pacific-eyrie-58843.herokuapp.com/
 
 ## Known Bugs
 * Protozoa

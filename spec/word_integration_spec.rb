@@ -6,7 +6,7 @@ set(:show_exceptions, false)
 describe('the words and definitions path', {:type => :feature}) do
   it('goes to the words list page') do
     visit('/')
-    click_link('See all words')
+    click_link('See them werds')
     expect(page).to have_content('Words')
   end
 
@@ -33,14 +33,14 @@ describe('the words and definitions path', {:type => :feature}) do
   it('goes to definitions page for word') do
     visit('/words')
     click_link('Vegetarian')
-    click_link('Add a new definition')
-    expect(page).to have_content('Add a definition for Vegetarian')
+    click_link('Add a new derfinetion')
+    expect(page).to have_content('Add a new derfinetion for Vegetarian')
   end
 
-  it('adds definition for word') do
+  it('adds derfinetion for word') do
     visit('/words')
     click_link('Vegetarian')
-    click_link('Add a new definition')
+    click_link('Add a new derfinetion')
     fill_in('def', :with => "A secret underground society that takes pleasure in torturing fruits and vegetables. ")
     click_button('Add')
     expect(page).to have_content('A secret underground society that takes pleasure in torturing fruits and vegetables. ')
@@ -57,12 +57,12 @@ describe('the words and definitions path', {:type => :feature}) do
     visit('/words')
     click_link('Vegetarian')
     click_link('Main Page')
-    expect(page).to have_content('Words and Definitions!')
+    expect(page).to have_content('DERFINERTIONS AND WERDS')
   end
 
   it('goes back to main page from list of words page') do
     visit('/words')
     click_link('Main Page')
-    expect(page).to have_content('Words and Definitions!')
+    expect(page).to have_content('DERFINERTIONS AND WERDS')
   end
 end
