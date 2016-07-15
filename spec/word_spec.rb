@@ -54,7 +54,7 @@ describe('Word') do
    describe('#add_definition') do
      it('adds a new definition to a word') do
        test_word = Word.new({:name=> "Vegetarian", :definitions=> []})
-       test_def = Definition.new({:def=> "A bad hunter"})
+       test_def = Definition.new({:definitions=> "A bad hunter"})
        test_word.add_definition(test_def)
        expect(test_word.definitions()).to(eq([test_def]))
      end

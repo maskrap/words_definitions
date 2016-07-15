@@ -1,9 +1,9 @@
 class Definition
   @@definitions = []
-  attr_reader(:def, :id)
+  attr_reader(:definitions, :id)
 
   define_method(:initialize) do |attributes|
-    @def = attributes.fetch(:def)
+    @definitions = attributes.fetch(:definitions)
     @id = @@definitions.length().+(1)
   end
 
