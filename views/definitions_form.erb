@@ -1,9 +1,12 @@
 <h1>Add a new derfinetion for <%= @word.name() %></h1>
 <form action="/definition" method="post">
-  <input id="word_id" name="word_id" type="hidden" value="<%= @word.id() %>">
-  <label for="def">Definition:</label>
+  <input id="word_id" name="word_id" type="text" value="<%= @word.id() %>">
+  <label for="def">Add a new derfinetion:</label>
   <input id="def" name="def" type="text" required>
   <button type="submit">Add</button>
 <form>
 
 <a href="/word/<%= @word.id() %>">Never mind, go back</a>
+<a href="/words/new">Add a new werd</a>
+<a href="/words/">Return to all words</a>
+<a href="/">Main Page</a>

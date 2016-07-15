@@ -12,13 +12,13 @@ describe('the words and definitions path', {:type => :feature}) do
 
   it('goes to add new word form') do
     visit('/')
-    click_link('Add a new word')
-    expect(page).to have_content('Add a word')
+    click_link('Add a new werd')
+    expect(page).to have_content('Add a new werd')
   end
 
   it('adds new word to list of words') do
     visit('/')
-    click_link('Add a new word')
+    click_link('Add a new werd')
     fill_in('word', :with => 'Vegetarian')
     click_button('Add')
     expect(page).to have_content('Vegetarian')
@@ -37,13 +37,13 @@ describe('the words and definitions path', {:type => :feature}) do
     expect(page).to have_content('Add a new derfinetion for Vegetarian')
   end
 
-  it('adds derfinetion for word') do
+  it('adds derfinetion') do
     visit('/words')
     click_link('Vegetarian')
     click_link('Add a new derfinetion')
-    fill_in('def', :with => "A secret underground society that takes pleasure in torturing fruits and vegetables. ")
+    fill_in('def', :with => 'Hungry hungry')
     click_button('Add')
-    expect(page).to have_content('A secret underground society that takes pleasure in torturing fruits and vegetables. ')
+    expect(page).to have_content('Hungry hungry')
   end
 
   it('goes back to list of words from word definition page') do
