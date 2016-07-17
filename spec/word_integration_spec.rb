@@ -37,8 +37,31 @@ describe('the words and definitions path', {:type => :feature}) do
     expect(page).to have_content('Add a new derfinetion for Vegetarian')
   end
 
-  it('goes back to main page from list of words page') do
+  it('adds derfinetion for word') do
     visit('/words')
+    click_link('Vegetarian')
+    click_link('Add a new derfinetion')
+    fill_in('def', :with => "Fruit torture")
+    click_button('Add')
+    expect(page).to have_content('Fruit torture')
+  end
+
+  it('goes back to list of words from word definition page') do
+    visit('/words')
+    click_link('Vegetarian')
+    click_link('Return to all words')
+    expect(page).to have_content('Words')
+  end
+
+  it('goes back to main page from word definition page') do
+    visit('/words')
+    click_link('Vegetarian')
+    click_link('Main Page')
+    expect(page).to have_content('DERFINERTIONS AND WERDS')
+  end
+
+  it('goes back to main page from list of words page') do
+    visit('/')
     click_link('Main Page')
     expect(page).to have_content('DERFINERTIONS AND WERDS')
   end

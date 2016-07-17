@@ -1,10 +1,9 @@
 <h1>Words</h1>
 <ul>
   <% @words.each() do |word| %>
-    <li><a href="/words/<%= word.id() %>"><%= word.name() %></a></li>
+    <li><a href="/words/<%= word.id() %>"><span id="word-name"><%= word.name() %></span></a></li>
   <% end %>
 </ul>
 
-<a href="/words/new">Add a new werd</a>
-<a href="/words">Return to all words</a>
-<a href="/">Main Page</a>
+<p><a href="/words/new">Add a new word</a></p>
+<p><a href="/">Return to main page</a></p>
